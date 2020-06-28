@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "system",
     "noImplicitAny": true,
     "removeComments": true,
     "jsx": "react",
     "preserveConstEnums": true,
-    "outFile": "../../built/local/tsc.js",
-    "sourceMap": true
+    "sourceMap": true,
+    "outDir": "dist",
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ]
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
