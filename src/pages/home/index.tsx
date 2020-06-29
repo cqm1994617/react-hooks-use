@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useCallback } from 'react'
+import { useHistory } from 'react-router-dom'
 
 function Index() {
+
+  const history = useHistory()
+
+  const to = useCallback((path: string) => () => {
+    history.push(path)
+  }, [history])
 
   return (
     <>
@@ -18,10 +25,10 @@ function Index() {
         }
     `}</style>
       <div className="container">
-        <div className="link">定时器</div>
-        <div className="link">闭包陷阱</div>
-        <div className="link">网络请求</div>
-        <div className="link">加载中状态</div>
+        <div className="link" onClick={to('/interval')}>定时器</div>
+        <div className="link" onClick={to('/closure')}>闭包陷阱</div>
+        <div className="link" onClick={to('/network')}>网络请求</div>
+        <div className="link" onClick={to('/loading')}>加载中状态</div>
       </div>
 
     </>
