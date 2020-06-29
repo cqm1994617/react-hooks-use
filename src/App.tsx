@@ -1,12 +1,12 @@
 import React, {Suspense} from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Index from './pages/index/index'
+import Home from './pages/home/index'
 
 function App() {
   return (
     <BrowserRouter basename="/react-hooks-demo">
       <Switch>
-        <Route exact path="/" component={Index} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </BrowserRouter>
   )
