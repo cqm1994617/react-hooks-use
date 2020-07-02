@@ -12,24 +12,18 @@ function reducer(state = 0, action: ActionType) {
 }
 
 function useRefState(initValue: any) {
-  const [value, setValue] = useState(initValue)
-  const ref = useRef(initValue)
+  const [state, setState] = useState(initValue)
+  const stateRef = useRef(initValue)
 
   useEffect(() => {
-    setValue(ref.current)
-  }, [ref.current])
+    stateRef.current = state
+  }, [state])
 
-  const setStateValue = (data: any) => {
-    console.log(ref.current)
-    ref.current = data
-    console.log(ref.current)
-  }
-
-  return {
-    value,
-    refValue: ref.current,
-    setStateValue
-  }
+  return [
+    state,
+    stateRef,
+    setState
+  ]
 
 }
 
@@ -37,7 +31,7 @@ function ClosurePage() {
 
   const [data, setData] = useState(0)
   const [state, dispatch] = useReducer(reducer, 0)
-  const {value, refValue, setStateValue} = useRefState(0)
+  const [value, valueRef, setValue] = useRefState(0)
 
   const testClick = () => {
     setData(10)
@@ -56,9 +50,9 @@ function ClosurePage() {
   }
 
   const testClick3 = () => {
-    setStateValue(10)
+    setValue(10)
     setTimeout(() => {
-      console.log(refValue)
+      console.log(value, valueRef.current)
     }, 10)
   }
 
