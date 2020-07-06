@@ -6,6 +6,7 @@ import ClosurePage from './pages/closure/index'
 import LoadingPage from './pages/loading/index'
 import NetworkPage from './pages/network/index'
 import UseStatePage from './pages/useState/index'
+import UseDebouncePage from './pages/useDebounce/index'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/loading" component={LoadingPage} />
         <Route exact path="/network" component={NetworkPage} />
         <Route exact path="/usestate" component={UseStatePage} />
+        <Route exact path="/useDebounce" component={UseDebouncePage} />
       </Switch>
     </BrowserRouter>
   )

@@ -30,6 +30,7 @@ function Index() {
         <div className="link" onClick={to('/network')}>网络请求</div>
         <div className="link" onClick={to('/loading')}>加载中状态</div>
         <div className="link" onClick={to('/usestate')}>useState demo</div>
+        <div className="link" onClick={to('/usedebounce')}>useDebounce demo</div>
       </div>
 
     </>
