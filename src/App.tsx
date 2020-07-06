@@ -5,6 +5,7 @@ import IntervalPage from './pages/interval/index'
 import ClosurePage from './pages/closure/index'
 import LoadingPage from './pages/loading/index'
 import NetworkPage from './pages/network/index'
+import UseStatePage from './pages/useState/index'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/closure" component={ClosurePage} />
         <Route exact path="/loading" component={LoadingPage} />
         <Route exact path="/network" component={NetworkPage} />
+        <Route exact path="/usestate" component={UseStatePage} />
       </Switch>
     </BrowserRouter>
   )

@@ -76,6 +76,8 @@ function ClosurePage() {
       <div onClick={testClick}>1 --> {data}</div>
       <div onClick={testClick2}>2 --> {value}</div>
       <div onClick={testClick3}>3 --> {state.data}</div>
+      <div>
+      </div>
     </div>
   )
 }
