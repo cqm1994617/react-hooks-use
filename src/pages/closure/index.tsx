@@ -25,6 +25,7 @@ function reducer(state = initalState, action: ActionType) {
   }
 }
 
+
 function useRefState(initValue: any) {
   const [state, setState] = useState(initValue)
   const stateRef = useRef(initValue)
