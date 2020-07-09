@@ -20,7 +20,6 @@ function useDebouncePage() {
   const [counter2, setCounter2] = useState(0);
 
   const handleClick = useDebounce(function () {
-    console.log('click1')
     setCounter1(counter => counter + 1)
   }, 1000)
 
